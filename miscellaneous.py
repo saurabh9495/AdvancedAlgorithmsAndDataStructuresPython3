@@ -15,3 +15,21 @@ def count_low_high(num_list):
     high_list = list(filter(lambda n: n > 50 or n % 3 == 0, num_list))
     low_list = list(filter(lambda n: n <= 50 and not n % 3 == 0, num_list))
     return [len(low_list), len(high_list)] 
+
+"""
+Stack Data Structure.
+"""
+class Stack():
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)				
+
+    def pop(self):
+        return self.items.pop()
+
+    def get_stack(self):
+        return self.items
+
+myStack = Stack()
