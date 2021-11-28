@@ -9,3 +9,9 @@ list2 = [10, 60, 20, 50]
 sum_list = [(n1, n2) for n1 in list1 for n2 in list2 if n1 + n2 > 100]
 
 print(sum_list)
+
+
+def count_low_high(num_list):
+    high_list = list(filter(lambda n: n > 50 or n % 3 == 0, num_list))
+    low_list = list(filter(lambda n: n <= 50 and not n % 3 == 0, num_list))
+    return [len(low_list), len(high_list)] 
